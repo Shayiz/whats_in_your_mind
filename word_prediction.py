@@ -1,7 +1,7 @@
 from tkinter import *
 from functools import partial
 
-checkk = 3
+
 def blnk_space(frame_val):
     blnkspace = Label(frame_val,text = "")
     blnkspace.pack(side = TOP)
@@ -16,16 +16,8 @@ def nextPage(pageNo,crntPage,yesOrNo,val):
         
     crntPage.pack_forget()
     pageNo.pack(side = TOP,fill = "both", expand =True)
-    return
-    
-    
-
-
-
-
-    
-  
-
+    return  
+     
 #defining the words   
 dt = {3 : "Android",
      4 : "Apple",
@@ -37,12 +29,13 @@ dt = {3 : "Android",
      10 : "Internet",
      11 : "FreeSoftware",
      12 :"Steve Jobs"}
+
 #creating the main window
 root = Tk()
 root.geometry("400x400")
 root.title("GuessThePerson")
 
-count = IntVar(root, value = 3)
+count = IntVar(root, value = 3) #creating a tkinter variable
 scndPage = Frame(root)  
 thirdPage = Frame(root)
 fourthPage =Frame(root)
@@ -60,7 +53,7 @@ blnk_space(mainPage)
 for i in range(3,13):
     val = Label(mainPage,text = dt[i]).pack(side = TOP )
 
-#adding blank space
+#adding blank space using the function
 blnk_space(mainPage)
 blnk_space(mainPage)
 
